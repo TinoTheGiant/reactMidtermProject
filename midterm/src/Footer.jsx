@@ -8,15 +8,18 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section about">
-          <h2>Manchester United FC</h2>
+          <h3>Manchester United FC Present & Past</h3>
+          <img src="/icons/icons144.png" alt="Manchester United FC Logo" className="footer-image" />
+          <img src="/pl.png" alt="Premier League Logo" className="pl-image" />
+          <img src="/adidas.png" alt="Premier League Logo" className="pl-image" />
           <p>Made with care by Tino Kaseke</p>
         </div>
         <div className="footer-section links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#legends">Legends</a></li>
             <li><a href="#players">Current Players</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#legends">Legends</a></li>
+            <li><a href="#fixtures">Fixtures</a></li>
           </ul>
         </div>
         <div className="footer-section social">
@@ -33,7 +36,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 Manchester United FC. All rights reserved.</p>
+        <p>&copy; 2024 Manchester United FC Past & Present. All rights reserved.</p>
       </div>
     </footer>
   );

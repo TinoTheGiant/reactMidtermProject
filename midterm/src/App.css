@@ -15,6 +15,7 @@ html {
   --man-utd-gray: #5B5B5B;
   --man-utd-gold: #D4AF37;
   --man-utd-navy: #002663;
+  --man-utd-background: #242424;
 }
 
 .header {
@@ -23,6 +24,17 @@ html {
   justify-content: space-between;
   background-color: var(--man-utd-dark-red);
   padding: 15px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 40px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 10px; /* Space between the logo and the text */
 }
 
 .logo h1 {
@@ -81,13 +93,14 @@ html {
   position: relative;
   text-align: center;
   z-index: 1;
-  padding: 20px;
+  padding: 30px;
+  margin-top: 150px;
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: 100px;
   margin: 0;
-  color: var(--man-utd-yellow);
+  color: var(--man-utd-white);
 }
 
 .hero-subtitle {
@@ -129,19 +142,47 @@ h3,h4 {
   margin-bottom: 20px;
 }
 
-p {
+p,a,b,i {
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* Squad*/
+.squad-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two equal-width columns */
+  gap: 20px; /* Space between columns */
+  padding: 20px;
+  color: white; /* Default text color */
+  background-color: var(--man-utd-background);
+}
+
+.squad-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.squad-list li {
+  margin: 10px 0;
+}
+
+.squad-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+
+
+/* legends-Gallery*/
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 20px; /* space between images */
   padding: 20px;
+  background-color: var(--man-utd-background);
 }
 
 .Legend {
@@ -149,6 +190,7 @@ p {
   height: auto;
   transition: transform 0.3s ease; /* Smooth transition for zoom effect */
   height: auto;
+  background-color: var(--man-utd-background);
 }
 
 .legend-container {
@@ -157,13 +199,138 @@ p {
   display: inline-block;
   margin: 15px;
   text-align: center;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .legend-container:hover .Legend {
   transform: scale(1.1); /* Zooms in by 10% */
 }
-/* Footer*/
 
+
+
+/* Fixture Section */
+/* Fixture Section */
+.fixtures-container {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: var(--man-utd-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.fixtures-container h1 {
+  color: var(--man-utd-red);
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+}
+#fixtures img {
+  width: 100px;
+  height: 36px;
+  border-radius: 8px;
+}
+/* Buttons */
+.fixtures-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  border-radius: 60px;
+}
+
+.fixtures-buttons button {
+  background-color: var(--man-utd-red);
+  color: var(--man-utd-white);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  border-radius: 60px;
+  transition: background-color 0.3s ease;
+}
+
+.fixtures-buttons button:hover {
+  background-color: var(--man-utd-dark-red);
+}
+
+.fixtures-buttons button:active {
+  background-color: var(--man-utd-gray);
+}
+
+/* Fixture Grid */
+.fixtures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.fixtures-grid-item {
+  background: var(--man-utd-white);
+  color: var(--man-utd-black);
+  border: 1px solid var(--man-utd-gray);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+}
+
+.fixtures-grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #37003c, #da291c, #fbe122);
+}
+
+/* Fixture Details */
+.fixtures-grid-item strong {
+  color: var(--man-utd-red);
+  font-size: 18px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.fixtures-grid-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: var(--man-utd-navy);
+}
+/* Add text color transition for better effect */
+.fixtures-grid-item:hover strong,
+.fixtures-grid-item:hover p {
+  color: var(--man-utd-white);
+
+}
+
+/* Score Box */
+.fixtures-score {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: 2px solid var(--man-utd-red); /* Border color matches the theme */
+  border-radius: 5px;
+  background-color: var(--man-utd-white); /* Background color */
+  color: var(--man-utd-black); /* Text color */
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+/* Error Message */
+.error-message {
+  color: var(--man-utd-yellow);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+
+
+/* Footer*/
 .footer {
   background-color: var(--man-utd-dark-red); 
   color: var(--man-utd-white); 
@@ -171,6 +338,17 @@ p {
   text-align: center;
 }
 
+.pl-image {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer-image {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+}
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -229,4 +407,86 @@ p {
   padding: 10px;
   border-top: 1px solid --man-utd-gray;
   color: var(--man-utd-white);
+}
+
+
+/* Responsive design */
+/* Mobile Optimization */
+
+/* Adjust the header */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Hero Section Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh; /* Adjust hero height for smaller screens */
+    background-position: center;
+  }
+
+  .hero-title {
+    font-size: 36px; /* Reduce font size for title */
+  }
+
+  .hero-subtitle {
+    font-size: 18px; /* Adjust subtitle font size */
+  }
+
+  .hero-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Squad Section Adjustments */
+@media (max-width: 768px) {
+  .squad-container {
+    grid-template-columns: 1fr; /* Stack items in one column */
+    text-align: center;
+    padding: 10px;
+  }
+
+  .squad-image {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Gallery Grid Adjustments */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Change to one column for smaller screens */
+    gap: 15px;
+    padding: 10px;
+  }
+}
+
+/* Footer Adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    padding: 10px 0;
+  }
 }

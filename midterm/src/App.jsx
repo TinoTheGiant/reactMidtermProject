@@ -2,6 +2,8 @@ import './App.css';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import Hero from './Hero.jsx';
+import Squads from './Squad.jsx';
+import Fixtures from './Fixtures.jsx';
 
 function Legend({ things }) {
   return (
@@ -32,12 +34,15 @@ export default function Gallery() {
       <Header />
       <Hero
         title="Welcome to Manchester United FC"
-        subtitle="The Theatre of Dreams"
+        subtitle="The Past & Present Of The Theatre of Dreams"
         buttonText="Learn More"
         buttonLink="#legends"
       />
 
-        <h1 id='legends'>Manchester United FC - Legends</h1>
+        <h1 id='players'>Current Squad</h1>
+        <Squads />
+
+        <h1 id='legends'>Legends</h1>
         <div className="gallery-grid">
           <Legend things={{ name: 'Sir Alex Ferguson', jerseyNumber: 'The Boss', id: 'siralex' }} />
           <Legend things={{ name: 'Roy Keane', jerseyNumber: '16', id: 'keane' }} />
@@ -58,6 +63,9 @@ export default function Gallery() {
           <Legend things={{ name: 'David De Gea', jerseyNumber: '1', id: 'DDG' }} />
           <Legend things={{ name: 'Cristiano Ronaldo', jerseyNumber: '7', id: 'cr7' }} />
         </div>
+
+        <h1 id='fixtures'><img src="/epl.png" alt="hublot watch" />Fixtures</h1>
+        <Fixtures />
 
 
       <Footer />
