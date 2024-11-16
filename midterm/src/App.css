@@ -150,7 +150,9 @@ p,a,b,i {
 
 /* Squad*/
 .mainSquad {
-  background-color: var(--man-utd-background);}
+  background-color: var(--man-utd-background);
+color: var(--man-utd-white);
+}
 
 .squad-container {
   display: grid;
@@ -216,7 +218,8 @@ p,a,b,i {
 /* Fixture Section */
 
 .mainFixtures {
-  background-color: var(--man-utd-background)
+  background-color: var(--man-utd-background);
+  color:var(--man-utd-white);
 }
 
 .fixtures-container {
