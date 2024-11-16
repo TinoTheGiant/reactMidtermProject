@@ -149,6 +149,9 @@ p,a,b,i {
 }
 
 /* Squad*/
+.mainSquad {
+  background-color: var(--man-utd-background);}
+
 .squad-container {
   display: grid;
   grid-template-columns: 1fr 2fr; /* Two equal-width columns */
@@ -182,7 +185,8 @@ p,a,b,i {
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 20px; /* space between images */
   padding: 20px;
-  background-color: var(--man-utd-background);
+  background-color: var(--man-utd-white);
+  color: var(--man-utd-navy);
 }
 
 .Legend {
@@ -210,6 +214,11 @@ p,a,b,i {
 
 /* Fixture Section */
 /* Fixture Section */
+
+.mainFixtures {
+  background-color: var(--man-utd-background)
+}
+
 .fixtures-container {
   margin: 20px auto;
   max-width: 1200px;
@@ -271,7 +280,7 @@ p,a,b,i {
 
 .fixtures-grid-item {
   background: var(--man-utd-white);
-  color: var(--man-utd-black);
+  color: var(--man-utd-navy);
   border: 1px solid var(--man-utd-gray);
   border-radius: 8px;
   padding: 15px;
@@ -313,7 +322,7 @@ p,a,b,i {
   border: 2px solid var(--man-utd-red); /* Border color matches the theme */
   border-radius: 5px;
   background-color: var(--man-utd-white); /* Background color */
-  color: var(--man-utd-black); /* Text color */
+  color: var(--man-utd-navy); /* Text color */
   font-size: 16px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;

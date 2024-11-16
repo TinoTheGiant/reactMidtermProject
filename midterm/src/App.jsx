@@ -39,8 +39,11 @@ export default function Gallery() {
         buttonLink="#legends"
       />
 
+      <div className='mainSquad'>
         <h1 id='players'>Current Squad</h1>
         <Squads />
+      </div>
+       
 
         <h1 id='legends'>Legends</h1>
         <div className="gallery-grid">
@@ -64,8 +67,11 @@ export default function Gallery() {
           <Legend things={{ name: 'Cristiano Ronaldo', jerseyNumber: '7', id: 'cr7' }} />
         </div>
 
+        <div className='mainFixtures'>
         <h1 id='fixtures'><img src="/epl.png" alt="hublot watch" />Fixtures</h1>
-        <Fixtures />
+                <Fixtures />
+        </div>
+        
 
 
       <Footer />
