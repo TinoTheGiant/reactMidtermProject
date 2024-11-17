@@ -78,6 +78,7 @@ html {
   align-items: center;
   justify-content: center;
   color: var(--man-utd-white);
+  background-color: var(--man-utd-background);
 }
 
 .hero-overlay {
@@ -113,8 +114,8 @@ html {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: var(--man-utd-yellow); /* Manchester United red */
-  color: var(--man-utd-navy);
+  background-color: var(--man-utd-red); /* Manchester United red */
+  color: var(--man-utd-white);
   text-decoration: none;
   font-size: 18px;
   border-radius: 60px;
@@ -122,7 +123,8 @@ html {
 }
 
 .hero-button:hover {
-  background-color: var(--man-utd-gold); /* Darker red for hover */
+  background-color: var(--man-utd-dark-red); /* Darker red for hover */
+  color: var(--man-utd-white);
 }
 
 
@@ -154,6 +156,10 @@ p,a,b,i {
 color: var(--man-utd-white);
 }
 
+#players{
+  margin-top: 20px;
+}
+
 .squad-container {
   display: grid;
   grid-template-columns: 1fr 2fr; /* Two equal-width columns */
@@ -182,6 +188,14 @@ color: var(--man-utd-white);
 
 
 /* legends-Gallery*/
+.mainLegends {
+  background-color:var(--man-utd-white);}
+  
+#legends {
+  margin-top: 20px;
+  background-color: var(--man-utd-white);
+  color: var(--man-utd-navy);
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -242,6 +256,7 @@ color: var(--man-utd-white);
   width: 100px;
   height: 36px;
   border-radius: 8px;
+  margin-top: 20px;
 }
 /* Buttons */
 .fixtures-buttons {
